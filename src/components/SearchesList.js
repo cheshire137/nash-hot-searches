@@ -27,6 +27,7 @@ class SearchesList extends Component {
 
     return (
       <ReactTable
+        filterable
         data={monthlySearches}
         columns={[
           {
@@ -38,12 +39,14 @@ class SearchesList extends Component {
           {
             Header: 'Count',
             accessor: 'count',
+            filterable: false,
             headerClassName: 'text-bold',
             minWidth: 170
           },
           {
             Header: 'Date',
             id: 'date',
+            filterable: false,
             accessor: d => d,
             headerClassName: 'text-bold',
             Cell: renderDate,
