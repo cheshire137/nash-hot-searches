@@ -9,12 +9,7 @@ const renderDate = row => {
 };
 
 const sortByDate = (searchA, searchB) => {
-  const dateA = searchA.date();
-  const dateB = searchB.date();
-  if (dateA < dateB) {
-    return -1;
-  }
-  return dateA > dateB ? 1 : 0;
+  return searchA.compareDate(searchB);
 };
 
 class SearchesList extends Component {

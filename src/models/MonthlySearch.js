@@ -33,6 +33,17 @@ class MonthlySearch {
     }
   }
 
+  compareDate(otherSearch) {
+    const dateA = this.date();
+    const dateB = otherSearch.date();
+
+    if (dateA < dateB) {
+      return -1;
+    }
+
+    return dateA > dateB ? 1 : 0;
+  };
+
   matches(criteria) {
     const { year } = criteria;
     return this.matchesYear(year);
