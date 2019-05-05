@@ -80,6 +80,12 @@ class App extends Component {
         </main>
         <footer className="site-footer">
           <div className="container-lg text-small py-1 d-flex flex-items-center flex-justify-between">
+            <a
+              target="_blank"
+              className="link-gray"
+              rel="noopener noreferrer"
+              href="https://github.com/cheshire137/nash-hot-searches"
+            >View source</a>
             <span>
               Data from <a
                 target="_blank"
