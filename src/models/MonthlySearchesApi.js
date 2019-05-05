@@ -10,7 +10,8 @@ class MonthlySearchesApi extends SocrataApi {
   }
 
   async getMonthlySearches() {
-    const query = '?$limit=50000';
+    const order = encodeURIComponent('year DESC');
+    const query = `?$limit=50000&$order=${order}`;
     const dataFormatter = rows => rows.map(row => new MonthlySearch(row));
     const rows = await this.get(query, dataFormatter);
     return rows.map(row => new MonthlySearch(row));
