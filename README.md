@@ -1,5 +1,8 @@
 # NashHotSearches
 
+A web app to allow visualizing the most popular searches made on
+[nashville.gov](https://www.nashville.gov/), using Nashville [open data](https://data.nashville.gov/Public-Services/Nashville-gov-Top-500-Monthly-Searches/fuaa-r5cm).
+
 ## How to develop
 
 Sign up for a [Socrata API app token](https://data.nashville.gov/profile/app_tokens) for Nashville data.
