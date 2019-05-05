@@ -52,7 +52,8 @@ class App extends Component {
   };
 
   render() {
-    const { filteredMonthlySearches, monthlySearches, isLoading } = this.state;
+    const { filteredMonthlySearches, monthlySearches, isLoading,
+            year } = this.state;
 
     return (
       <div>
@@ -65,6 +66,7 @@ class App extends Component {
               <SearchesFilter
                 monthlySearches={monthlySearches}
                 onYearChange={this.onYearChange}
+                year={year}
               />
             )}
           </div>
