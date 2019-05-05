@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MonthlySearchesApi from './models/MonthlySearchesApi';
+import SearchesList from './components/SearchesList';
 import Config from './config.json';
 import './App.css';
 
@@ -19,17 +20,22 @@ class App extends Component {
   }
 
   render() {
+    const { monthlySearches } = this.state;
+
     return (
       <div>
         <header className="site-header">
           <div className="container-lg py-2 d-flex flex-items-center flex-justify-between">
             <h1
               className="f3 text-normal"
-            >Nashville.gov Hot Searches</h1>
+            >Nashville.gov Top Searches</h1>
           </div>
         </header>
         <main className="site-main">
           <div className="container-lg">
+            <SearchesList
+              monthlySearches={monthlySearches}
+            />
           </div>
         </main>
         <footer className="site-footer">
