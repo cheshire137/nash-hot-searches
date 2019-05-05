@@ -32,6 +32,15 @@ class MonthlySearch {
       return new Date(this.year, monthForName(this.month), 1);
     }
   }
+
+  matches(criteria) {
+    const { year } = criteria;
+    return this.matchesYear(year);
+  }
+
+  matchesYear(year) {
+    return (year && this.year.toString() === year) || year === 'all';
+  }
 }
 
 export default MonthlySearch;
