@@ -12,6 +12,10 @@ const sortByDate = (searchA, searchB) => {
   return searchA.compareDate(searchB);
 };
 
+const centerText = ({ value }) => {
+  return <div className="text-center">{value}</div>
+};
+
 class SearchesList extends Component {
   render() {
     const { monthlySearches } = this.props;
@@ -29,14 +33,14 @@ class SearchesList extends Component {
             Header: 'Query',
             accessor: 'query',
             headerClassName: 'text-bold',
-            minWidth: 170
+            Cell: centerText
           },
           {
             Header: 'Count',
             accessor: 'count',
             filterable: false,
             headerClassName: 'text-bold',
-            minWidth: 170
+            Cell: centerText
           },
           {
             Header: 'Date',
@@ -45,7 +49,6 @@ class SearchesList extends Component {
             accessor: d => d,
             headerClassName: 'text-bold',
             Cell: renderDate,
-            minWidth: 170,
             sortMethod: sortByDate
           }
         ]}
