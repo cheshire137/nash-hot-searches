@@ -54,7 +54,7 @@ class SearchesList extends Component {
         ]}
         pageSize={10}
         showPageSizeOptions={false}
-        className="-striped -highlight searches-list"
+        className="-striped -highlight"
       />
     );
   }

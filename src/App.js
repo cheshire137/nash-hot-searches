@@ -58,7 +58,7 @@ class App extends Component {
     return (
       <div>
         <header className="site-header">
-          <div className="container-lg py-2 d-flex flex-items-center flex-justify-between">
+          <div className="container-lg py-3 d-flex flex-items-center flex-justify-between">
             <h1
               className="f3 text-normal"
             >Nashville.gov Top Searches</h1>
@@ -79,7 +79,7 @@ class App extends Component {
           </div>
         </main>
         <footer className="site-footer">
-          <div className="container-lg text-small py-1 d-flex flex-items-center flex-justify-between">
+          <div className="container-lg text-small py-4 d-flex flex-items-center flex-justify-between">
             <a
               target="_blank"
               className="link-gray"
